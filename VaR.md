@@ -42,7 +42,7 @@ library(readxl)
 ))
 ```
 
-    ## # A tibble: 4,306 x 4
+    ## # A tibble: 4,323 x 4
     ##    Date                   France     BRIC US_Corporate_Bonds
     ##    <dttm>                  <dbl>    <dbl>              <dbl>
     ##  1 2003-10-01 00:00:00  0.0238    0.0164            0.000210
@@ -55,7 +55,7 @@ library(readxl)
     ##  8 2003-10-10 00:00:00  0.000565 -0.00139           0.00297 
     ##  9 2003-10-13 00:00:00  0.00356   0.0111            0.000496
     ## 10 2003-10-14 00:00:00 -0.00218  -0.00183          -0.00471 
-    ## # ... with 4,296 more rows
+    ## # ... with 4,313 more rows
 
 Les données sont issues de Quandl. Vous pouvez remarquer dans la cellule
 B4 du fichier Excel la fonction Quandl qui permet d’importer les données
@@ -90,7 +90,7 @@ plot_intro(renta)
 (renta <- renta %>% drop_na())
 ```
 
-    ## # A tibble: 4,164 x 3
+    ## # A tibble: 4,180 x 3
     ##       France     BRIC US_Corporate_Bonds
     ##        <dbl>    <dbl>              <dbl>
     ##  1  0.0238    0.0164            0.000210
@@ -103,7 +103,7 @@ plot_intro(renta)
     ##  8  0.000565 -0.00139           0.00297 
     ##  9  0.00356   0.0111            0.000496
     ## 10 -0.00218  -0.00183          -0.00471 
-    ## # ... with 4,154 more rows
+    ## # ... with 4,170 more rows
 
 ``` r
 plot_intro(renta)
@@ -123,11 +123,11 @@ summary(renta)
 ```
 
     ##      France                BRIC            US_Corporate_Bonds  
-    ##  Min.   :-0.1073044   Min.   :-0.1226388   Min.   :-0.0227916  
-    ##  1st Qu.:-0.0060996   1st Qu.:-0.0057058   1st Qu.:-0.0014747  
-    ##  Median : 0.0006509   Median : 0.0010376   Median : 0.0003190  
-    ##  Mean   : 0.0004081   Mean   : 0.0005547   Mean   : 0.0002004  
-    ##  3rd Qu.: 0.0074609   3rd Qu.: 0.0075021   3rd Qu.: 0.0019529  
+    ##  Min.   :-0.1367993   Min.   :-0.1226388   Min.   :-0.0227916  
+    ##  1st Qu.:-0.0061430   1st Qu.:-0.0057453   1st Qu.:-0.0014800  
+    ##  Median : 0.0006321   Median : 0.0010284   Median : 0.0003194  
+    ##  Mean   : 0.0003249   Mean   : 0.0005039   Mean   : 0.0001883  
+    ##  3rd Qu.: 0.0074609   3rd Qu.: 0.0074963   3rd Qu.: 0.0019564  
     ##  Max.   : 0.1236734   Max.   : 0.1449443   Max.   : 0.0198546
 
 ``` r
@@ -164,21 +164,21 @@ indices avec ![\\alpha
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-4.24%   |  \-4.26%  |  \-3.34%   |    \-4.25%    |
+    |  \-4.32%   |  \-4.30%  |  \-3.40%   |    \-4.34%    |
     
 
   - **BRIC**:
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-3.86%   |  \-3.87%  |  \-3.16%   |    \-4.02%    |
+    |  \-3.94%   |  \-3.91%  |  \-3.19%   |    \-4.07%    |
     
 
   - **US\_Corporate\_Bonds**:
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-0.78%   |  \-0.78%  |  \-0.67%   |    \-0.79%    |
+    |  \-0.80%   |  \-0.81%  |  \-0.68%   |    \-0.82%    |
     
 
 <!-- end of list -->
@@ -192,21 +192,21 @@ indices avec ![\\alpha
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-7.04%   |  \-7.51%  |  \-4.45%   |    \-9.78%    |
+    |  \-7.83%   |  \-8.09%  |  \-4.53%   |   \-10.07%    |
     
 
   - **BRIC**:
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-8.62%   |  \-8.32%  |  \-4.22%   |    \-8.90%    |
+    |  \-8.61%   |  \-8.40%  |  \-4.25%   |    \-9.08%    |
     
 
   - **US\_Corporate\_Bonds**:
     
     | Historique | Bootstrap | Gaussienne | Skew\_Student |
     | :--------: | :-------: | :--------: | :-----------: |
-    |  \-1.35%   |  \-1.37%  |  \-0.90%   |    \-1.39%    |
+    |  \-1.65%   |  \-1.60%  |  \-0.91%   |    \-1.46%    |
     
 
 <!-- end of list -->
@@ -229,21 +229,21 @@ indices avec ![\\alpha
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-3.17% | \-4.28% |
+    | \-3.47% | \-4.33% |
     
 
   - **BRIC**:
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-3.03% | \-3.91% |
+    | \-3.53% | \-4.00% |
     
 
   - **US\_Corporate\_Bonds**:
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-0.69% | \-0.78% |
+    | \-0.70% | \-0.81% |
     
 
 <!-- end of list -->
@@ -257,21 +257,21 @@ indices avec ![\\alpha
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-6.97% | \-7.59% |
+    | \-6.59% | \-8.25% |
     
 
   - **BRIC**:
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-6.76% | \-8.39% |
+    | \-6.34% | \-8.58% |
     
 
   - **US\_Corporate\_Bonds**:
     
     |   GEV   |   GPD   |
     | :-----: | :-----: |
-    | \-1.25% | \-1.39% |
+    | \-1.33% | \-1.54% |
     
 
 <!-- end of list -->
